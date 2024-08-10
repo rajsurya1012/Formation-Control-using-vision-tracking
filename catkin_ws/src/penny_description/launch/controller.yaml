@@ -1,0 +1,23 @@
+penny_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  fr_wheel_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fr_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rr_wheel_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rr_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  fl_wheel_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fl_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rl_wheel_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rl_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}

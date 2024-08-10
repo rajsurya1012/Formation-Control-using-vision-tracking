@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<robot name="penny" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find penny_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find penny_description)/urdf/penny.trans" />
+<xacro:include filename="$(find penny_description)/urdf/penny.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.008301067405089037 -0.027700282468826398 0.038018828376215355" rpy="0 0 0"/>
+    <mass value="16.24776314450215"/>
+    <inertia ixx="0.035037" iyy="0.087915" izz="0.113901" ixy="0.0" iyz="-0.0" ixz="-0.002502"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fr_wheel_1">
+  <inertial>
+    <origin xyz="1.0888776555417756e-07 -0.0023742320486585047 -3.913566094249088e-07" rpy="0 0 0"/>
+    <mass value="0.17384002948639105"/>
+    <inertia ixx="0.000123" iyy="0.000227" izz="0.000123" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.083063 -0.0623 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/fr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.083063 -0.0623 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/fr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rr_wheel_1">
+  <inertial>
+    <origin xyz="1.0888780065110293e-07 -0.0023742320486584492 -3.9135660939021433e-07" rpy="0 0 0"/>
+    <mass value="0.17384002948639105"/>
+    <inertia ixx="0.000123" iyy="0.000227" izz="0.000123" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.056937 -0.0623 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/rr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.056937 -0.0623 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/rr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fl_wheel_1">
+  <inertial>
+    <origin xyz="1.0888773914474736e-07 0.002373667111005631 -3.913566094318477e-07" rpy="0 0 0"/>
+    <mass value="0.17384002948639088"/>
+    <inertia ixx="0.000123" iyy="0.000227" izz="0.000123" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.083063 0.1177 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/fl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.083063 0.1177 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/fl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rl_wheel_1">
+  <inertial>
+    <origin xyz="1.088878269842053e-07 0.0023736671110056867 -3.9135660939021433e-07" rpy="0 0 0"/>
+    <mass value="0.17384002948639088"/>
+    <inertia ixx="0.000123" iyy="0.000227" izz="0.000123" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.056937 0.1177 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/rl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.056937 0.1177 -0.035363" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://penny_description/meshes/rl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="fr_wheel" type="fixed">
+  <origin xyz="-0.083063 0.0623 0.035363" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="fr_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="rr_wheel" type="fixed">
+  <origin xyz="0.056937 0.0623 0.035363" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rr_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="fl_wheel" type="fixed">
+  <origin xyz="-0.083063 -0.1177 0.035363" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="fl_wheel_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="rl_wheel" type="fixed">
+  <origin xyz="0.056937 -0.1177 0.035363" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rl_wheel_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+</robot>

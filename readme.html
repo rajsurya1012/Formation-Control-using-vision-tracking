@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="formation-control-using-vision-tracking">Formation Control using Vision Tracking</h1>
+<p>The objective is to move a set of holonomic robots while adhering to geometric constraints between them by using an RGB camera.<br>
+Authors: Raj Surya, Santo Santhosh</p>
+<h2 id="setup-required-to-run">Setup Required to run</h2>
+<ol>
+<li>ROS 1 Noetic</li>
+<li>Open CV</li>
+<li>Python 3</li>
+<li>Gazebo</li>
+<li>Teleop Twist keyboard package</li>
+</ol>
+<h2 id="steps-to-run">Steps to run</h2>
+<ol>
+<li>Run <code>catkin_make</code> in your workspace.</li>
+<li>Run <code>roslaunch multi_robot main.launch</code>, this should open the environment in gazebo.</li>
+<li>In a new terminal, run <code>rosrun multi_robot image.py</code>.</li>
+<li>In a new terminal run, <code>rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/robot1/cmd_vel</code>.</li>
+<li>By using the keys, you should be able to control the robot and see the other robots following its motion.</li>
+</ol>
+</div>
+</body>
+
+</html>
