@@ -15,20 +15,27 @@ The main objective of this project is to implement formation control using visio
 ### Image Processing
 1. **Raw Image Acquisition**
    - Capture raw images for processing.
+   - ![Raw Image](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p1.jpg)
 2. **Red Grayscaling**
    - Convert images to grayscale focusing on the red channel.
+   - ![Red Grayscaling](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p6.jpg)
 3. **Gaussian Blur**
    - Apply Gaussian blur to smooth the images.
+   - ![Gaussian Blur](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p3.jpg)
 4. **Thresholding**
    - Use thresholding to isolate relevant features.
+   - ![Thresholding](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p10.jpg)
 
 ### Robot Pose Estimation
 - **Homography Update**
   - Update the homography for perspective transformations.
+  - ![Homography Update](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/homography_update.jpg)
 - **Contouring and Area Thresholding**
   - Detect contours and apply area thresholds for object detection.
+  - ![Contouring and Area Thresholding](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p5.jpg)
 - **Center Calculation**
   - Calculate the center of detected objects for tracking.
+  - ![Center Calculation](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p2.jpg)
 
 ### PD Control Plant
 - Implement a Proportional-Derivative (PD) control system for maintaining formation.
@@ -36,12 +43,32 @@ The main objective of this project is to implement formation control using visio
 ### Follower State Update
 - Continuously update the state of follower robots based on new image data.
 
+## Results
+
+### Motion Tests
+- **Speed 3X Forward Motion**
+  - ![Forward Motion](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p9.jpg)
+- **Speed 3X Zig Zag Motion**
+  - ![Zig Zag Motion](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p8.jpg)
+- **Speed 3X Reverse Motion**
+  - ![Reverse Motion](https://github.com/rajsurya1012/Formation-Control-using-vision-tracking/raw/main/Results/p7.jpg)
 
 ### Limitations
 - Speed constraints
 - Difficulty with sharp turns
 - Occlusions and similar objects causing tracking errors
-- Limited
+- Limited field of view and resolution issues
+
+## Applications
+
+- **Warehouse Automation**
+- **Farm Land Management**
+- **Drone Shows**
+- **Exploration Missions**
+
+## Conclusion
+
+Thank you for reviewing this project. Please feel free to reach out with any questions or for further discussion.
 
 
 ## Setup Required to run
